@@ -1,0 +1,153 @@
+/* 設定整個網頁的基礎樣式 */
+body {
+    font-family: '微軟正黑體', 'Arial', sans-serif;
+    background-color: #f0f8ff; /* 淺藍色背景 */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* 整個測驗容器的樣式 */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 650px; 
+    text-align: center;
+}
+
+/* 頂部標題樣式 */
+header h1 {
+    color: #ff6347; /* 亮紅色 */
+    font-size: 28px;
+    border-bottom: 3px solid #ff6347;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* 得分顯示樣式 */
+.score-display {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1e90ff; /* 藍色 */
+}
+
+/* 題目容器樣式 */
+.question-container {
+    background-color: #ffe4b5; /* 淺橘色背景 */
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* 單元小標題樣式 */
+.unit-title {
+    font-size: 16px;
+    color: #4682b4;
+    font-weight: normal;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #4682b4;
+}
+
+#question-text {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* 按鈕群組的排版 */
+.btn-grid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(2, 1fr); /* 兩欄排版 */
+    margin-top: 20px;
+}
+
+/* 單元選擇按鈕樣式 (較大) */
+.unit-btn {
+    grid-column: span 2; /* 讓單元按鈕佔滿兩欄 */
+    background-color: #4682b4;
+    font-size: 22px !important;
+    padding: 20px;
+}
+
+/* 一般按鈕樣式 */
+.btn {
+    background-color: #4682b4; /* 鋼藍色 */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.2s;
+}
+
+/* 按鈕滑鼠移上時的顏色變化 */
+.btn:hover:not(.correct):not(.wrong) {
+    background-color: #5f9ea0;
+}
+
+/* 正確和錯誤的視覺回饋 */
+.correct {
+    background-color: #3cb371 !important; /* 綠色 */
+}
+
+.wrong {
+    background-color: #dc143c !important; /* 紅色 */
+}
+
+/* 提示訊息區塊 (用於顯示 Emoji 回饋) */
+#feedback-message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 30px; /* 放大 Emoji */
+    transition: opacity 0.5s;
+    text-align: center;
+}
+
+/* 圓形圖形的簡單樣式（用於圓面積單元） */
+.circle-drawing {
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%; /* 變成圓形 */
+    background-color: #87ceeb; /* 天藍色 */
+    border: 3px solid #4682b4;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #333;
+    animation: pulse 1.5s infinite; /* 簡單的動畫效果 */
+}
+
+/* 圓形脈衝動畫 */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(135, 206, 235, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(135, 206, 235, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(135, 206, 235, 0);
+    }
+}
+
+/* 隱藏元素 */
+.hidden {
+    display: none !important;
+}
